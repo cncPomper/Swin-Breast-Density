@@ -10,14 +10,11 @@ data_dir = Path('data')
 available_files = sorted(
     path
     for path in data_dir.iterdir()
-    if path.is_file() and not path.name.endswith('.filepart')
 )
 available_ids = {path.name for path in available_files}
 
 # Filter metadata to include only rows with ImageIDs that have corresponding files in the data directory
-metadata_subset = metadata[metadata['ImageID'].isin(available_ids) &
-                           metadata['View'].isin(['MLO']) &
-                           metadata['BIRADS'].isin(['B1'])].head(6)
+metadata_subset = metadata[metadata['ImageID'].isin(available_ids)].head(6)
 
 
 
