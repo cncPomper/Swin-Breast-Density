@@ -13,6 +13,15 @@ pip install uv
 uv sync
 ```
 
+### Windows
+```
+source .venv/Script/activate
+```
+### Linux
+```
+source .venv/bin/activate
+```
+
 ## Notebook
 ```bash
 uv run ipython kernel install --user --env VIRTUAL_ENV $(pwd)/.venv --name=project
