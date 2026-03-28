@@ -1,0 +1,19 @@
+[project]
+name = "mammo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gdcm>=1.1",
+    "matplotlib>=3.10.8",
+    "pandas>=3.0.1",
+    "pydicom==2.3.1",
+    "pylibjpeg>=2.1.0",
+    "pylibjpeg-libjpeg>=2.4.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+]
